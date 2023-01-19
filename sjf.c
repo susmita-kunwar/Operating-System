@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 void main(){
-    int b[4],a[4],c[4],t[4],w[4],i,x,wt=0,avg=0,temp,pos,j;
+    int b[4],a[4],c[4],t[4],w[4],i,x,wt=0,avg1=0,temp,pos,j,avg2=0,tt=0;
     for(i=0;i<4;i++){
         printf("Enter Arrival time for p%d \n",i+1);
         scanf("%d",&a[i]);
@@ -47,7 +47,13 @@ void main(){
     for(i=0;i<4;i++){
         wt=wt+w[i];
     }
-    avg=wt/4;
-    printf("Average waiting time is %d \n",avg);
+    for(i=0;i<4;i++){
+        tt=tt+t[i];
+    }
+
+    avg1=wt/4;
+    printf("Average waiting time is %d \n",avg1);
+    avg2=tt/4;
+    printf("Average turnaround time is %d \n",avg2);
     
 }
